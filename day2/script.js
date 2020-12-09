@@ -1,6 +1,7 @@
 const fs = require('fs');
 
 let totalValid = 0;
+let totalValidPart2 = 0;
 
 fs.readFile('./day2/input.txt', 'utf8', (err, lines) => {
     lines = lines.split(RegExp('\n'))
@@ -18,9 +19,23 @@ fs.readFile('./day2/input.txt', 'utf8', (err, lines) => {
         if(letterCount>=lines[i][0] && letterCount<=lines[i][1]){
             totalValid++
         }
+        console.log(password[lines[i][0]-1], password[lines[i][1]-1], lines[i][2], password[lines[i][0]-1]===lines[i][2] && password[lines[i][1]-1]===lines[i][2])
+        if(password[lines[i][0]-1]===lines[i][2] && password[lines[i][1]-1]===lines[i][2]){
+           //goober
+        }else if(password[lines[i][0]-1]===lines[i][2]){
+            totalValidPart2++
+        }else if(password[lines[i][1]-1]===lines[i][2]){
+            totalValidPart2++
+        }
+        
     }
+
     console.log(totalValid);
+    console.log(totalValidPart2);
+
 })
+
+
 
 
 
