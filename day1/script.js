@@ -10,4 +10,21 @@ function multiplyPair(){
  }
 }
 
-multiplyPair();
+console.log(multiplyPair());
+
+
+//Part 2
+
+function multiplyThree(){
+    for(x=0;x<numbers.length;x++){
+      for(i=0;i<numbers.length;i++){
+        for(y=0;y<numbers.length;y++){
+            if(numbers[x]+numbers[i]+numbers[y] === 2020){
+              return numbers[x] * numbers[i] * numbers[y];
+          }
+        }
+    }
+   }
+  }
+
+console.log(multiplyThree());
