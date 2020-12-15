@@ -7,7 +7,7 @@ let hit = 0;
 
 fs.readFile('./day3/input.txt', 'utf8', (err, lines) => {
     lines = lines.split("\n");
-    for(i=0;i<lines.length-1;i++){
+    for(i=0;i<lines.length-1;i+=2){
         if(counter >= 31){
             counter -= 31;
         }
@@ -17,7 +17,7 @@ fs.readFile('./day3/input.txt', 'utf8', (err, lines) => {
         }else{
             hit++
         }
-        counter+=3
+        counter+=1
     }
     console.log(hit,miss)
 });
