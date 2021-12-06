@@ -23,6 +23,7 @@ for (i = 0; i < input.length; i++) {
 
   let A = (+input[i] || 0) + (+input[i + 1] || 0) + (+input[i + 2] || 0);
   let B = (+input[i + 1] || 0) + (+input[i + 2] || 0) + (+input[i + 3] || 0);
+
   if (B > A) {
     windowIncrease++;
   } else {
